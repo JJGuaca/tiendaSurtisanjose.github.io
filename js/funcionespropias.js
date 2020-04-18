@@ -134,23 +134,23 @@ function productoNuevo(valor){
 	if (opcion === 1) {
 		var tabla=document.getElementById('Lacteo');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
+		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td>lacteo</td><td>lacteo</td><td>lacteo</td><td>lacteo</td><td>lacteo</td>'
 	}else if (opcion === 2) {
 		var tabla=document.getElementById('Frutas');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
+		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td>frutas</td><td>frutas</td><td>frutas</td><td>frutas</td><td>frutas</td>'
 	}else if (opcion === 3) {
 		var tabla=document.getElementById('Verduras');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
+		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td>Verduras</td><td>Verduras</td><td>Verduras</td><td>Verduras</td><td>Verduras</td>'
 	}else if (opcion === 4) {
 		var tabla=document.getElementById('Granos');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
+		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td>Granos</td><td>Granos</td><td>Granos</td><td>Granos</td><td>Granos</td>'
 	}else if (opcion === 5) {
 		var tabla=document.getElementById('Desechables');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
+		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td>Desechables</td><td>Desechables</td><td>Desechables</td><td>Desechables</td><td>Desechables</td>'
 	}
 	
 }
@@ -197,4 +197,18 @@ function quitarPorducto(valor){
 			tabla.deleteRow(filas-1);
 		}
 	}
+}
+function recogerPedido(){
+	var data='';
+	var parametros=[];
+	$('tr td').each(function(indice,elemento){
+			var td={};
+			td=$(elemento).text();
+			parametros.push(td);
+	});
+	console.log(parametros);
+	for (var i = 0; i < parametros.length; i++) {
+			data += parametros[i]+' ';
+	}
+	$('#pedido').html(data);
 }
