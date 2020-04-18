@@ -130,13 +130,13 @@ function mas(valor){
 	
 }
 function productoNuevo(valor){
-	var opcion = valor.value;
+	var opcion =parseInt(valor.value);
 	if (opcion === 1) {
 		var tabla=document.getElementById('Lacteo');
 		var filas= tabla.rows.length;
 		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
 	}else if (opcion === 2) {
-		var tabla=document.getElementById('Futas');
+		var tabla=document.getElementById('Frutas');
 		var filas= tabla.rows.length;
 		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
 	}else if (opcion === 3) {
