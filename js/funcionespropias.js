@@ -154,3 +154,47 @@ function productoNuevo(valor){
 	}
 	
 }
+function quitarPorducto(valor){
+	var opcion=parseInt(valor.value);
+	if (opcion === 1) {
+		var tabla=document.getElementById('Lacteo');
+		var filas = tabla.rows.length;
+		if (filas <= 1) {
+			alert('No hay productos para quitar');
+		}else{
+			tabla.deleteRow(filas-1);
+		}
+	}else if (opcion === 2) {
+		var tabla=document.getElementById('Frutas');
+		var filas = tabla.rows.length;
+		if (filas <= 1) {
+			alert('No hay productos para quitar');
+		}else{
+			tabla.deleteRow(filas-1);
+		}
+	}else if (opcion === 3) {
+		var tabla=document.getElementById('Verduras');
+		var filas = tabla.rows.length;
+		if (filas <= 1) {
+			alert('No hay productos para quitar');
+		}else{
+			tabla.deleteRow(filas-1);
+		}
+	}else if (opcion === 4) {
+		var tabla=document.getElementById('Granos');
+		var filas = tabla.rows.length;
+		if (filas <= 1) {
+			alert('No hay productos para quitar');
+		}else{
+			tabla.deleteRow(filas-1);
+		}
+	}else if (opcion === 5) {
+		var tabla=document.getElementById('Desechables');
+		var filas = tabla.rows.length;
+		if (filas <= 1) {
+			alert('No hay productos para quitar');
+		}else{
+			tabla.deleteRow(filas-1);
+		}
+	}
+}
