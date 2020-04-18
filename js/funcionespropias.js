@@ -134,23 +134,23 @@ function productoNuevo(valor){
 	if (opcion === 1) {
 		var tabla=document.getElementById('Lacteo');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td>lacteo</td><td>lacteo</td><td>lacteo</td><td>lacteo</td><td>lacteo</td>'
+		tabla.insertRow(-1).innerHTML='</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>'
 	}else if (opcion === 2) {
 		var tabla=document.getElementById('Frutas');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td>frutas</td><td>frutas</td><td>frutas</td><td>frutas</td><td>frutas</td>'
+		tabla.insertRow(-1).innerHTML='</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>'
 	}else if (opcion === 3) {
 		var tabla=document.getElementById('Verduras');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td>Verduras</td><td>Verduras</td><td>Verduras</td><td>Verduras</td><td>Verduras</td>'
+		tabla.insertRow(-1).innerHTML='</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>'
 	}else if (opcion === 4) {
 		var tabla=document.getElementById('Granos');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td>Granos</td><td>Granos</td><td>Granos</td><td>Granos</td><td>Granos</td>'
+		tabla.insertRow(-1).innerHTML='</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>'
 	}else if (opcion === 5) {
 		var tabla=document.getElementById('Desechables');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td>Desechables</td><td>Desechables</td><td>Desechables</td><td>Desechables</td><td>Desechables</td>'
+		tabla.insertRow(-1).innerHTML='</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>'
 	}
 	
 }
@@ -201,14 +201,21 @@ function quitarPorducto(valor){
 function recogerPedido(){
 	var data='';
 	var parametros=[];
-	$('tr td').each(function(indice,elemento){
+	$('td input').each(function(indice,elemento){
 			var td={};
-			td=$(elemento).text();
+			td=$(elemento).val();
 			parametros.push(td);
 	});
 	console.log(parametros);
+	var salto='\t';
+	var j=1;
+	data+='Productos:\n';
 	for (var i = 0; i < parametros.length; i++) {
-			data += parametros[i]+' ';
+		data += parametros[i]+salto;
+		if (((i+1)%5)===0) {
+			data+='\n';
+		}
+
 	}
 	$('#pedido').html(data);
 }
