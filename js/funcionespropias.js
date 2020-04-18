@@ -129,3 +129,28 @@ function mas(valor){
 	}
 	
 }
+function productoNuevo(valor){
+	var opcion = valor.value;
+	if (opcion === 1) {
+		var tabla=document.getElementById('Lacteo');
+		var filas= tabla.rows.length;
+		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
+	}else if (opcion === 2) {
+		var tabla=document.getElementById('Futas');
+		var filas= tabla.rows.length;
+		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
+	}else if (opcion === 3) {
+		var tabla=document.getElementById('Verduras');
+		var filas= tabla.rows.length;
+		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
+	}else if (opcion === 4) {
+		var tabla=document.getElementById('Granos');
+		var filas= tabla.rows.length;
+		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
+	}else if (opcion === 5) {
+		var tabla=document.getElementById('Desechables');
+		var filas= tabla.rows.length;
+		tabla.insertRow(-1).innerHTML='<td>'+(filas)+'</td><td></td><td></td><td></td><td></td><td></td>'
+	}
+	
+}

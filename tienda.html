@@ -95,82 +95,30 @@
 				<div class="card">
 					<div class="card-header bg-success" id="headingOne">
 						<h5 class="mb-0">
-							<button class="btn btn-danger" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-								Campo
+							<button class="btn btn-danger" data-toggle="collapse" data-target="#acordeonuno" aria-expanded="true" aria-controls="acordeonuno">
+								Lacteo
 							</button>
 						</h5>
 					</div>
-
-					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+					<div id="acordeonuno" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 						<div class="row">
-							<div class="col-md-3">
+							<div class="col-md-12">
 								<div class="card">
 									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 1 Cmapo</strong></label>
-											<p>	Lorem ipsum dolor sit amet.</p>
-											<label><strong>Peso:</strong>500 (grs) - 1 Lbr</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value='1'><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto1" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value='1'><i class="fas fa-plus"></i></button></td>
-												</tr>											
+										<div class="carrito table-responsive">
+											<table class="table table-striped table-bordered table-borderless table-sm" id="Lacteo">
+												<thead class="thead-dark">
+													<tr>
+														<th>ID</th>
+														<th>Producto</th>
+														<th>Marca</th>
+														<th>Presentación</th>
+														<th>Cantidad</th>
+														<th>Observación (Opcional)</th>
+													</tr>													
+												</thead>										
 											</table>
-										</div>
-									</div>								
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="card">
-									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 2 Campo</strong></label>
-											<p>	Lorem ipsum dolor sit amet. Segundo producto</p>
-											<label><strong>Peso:</strong>1000 (grs) - 1 Kl</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value="2"><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto2" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value="2"><i class="fas fa-plus"></i></button></td>
-												</tr>											
-											</table>
-										</div>
-									</div>								
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="card">
-									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 3 Campo</strong></label>
-											<p>	Lorem ipsum dolor sit amet. Tercer producto</p>
-											<label><strong>Peso:</strong>250 (grs) - 1/4 Lbs</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value="3"><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto3" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value="3"><i class="fas fa-plus"></i></button></td>
-												</tr>											
-											</table>
-										</div>
-									</div>								
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="card">
-									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 4 Campo</strong></label>
-											<p>	Lorem ipsum dolor sit amet. Cuarto producto</p>
-											<label><strong>Peso:</strong>1 (Und)</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value="4"><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto4" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value="4"><i class="fas fa-plus"></i></button></td>
-												</tr>											
-											</table>
+											<button class="btn btn-danger" onclick="productoNuevo(this)" value="1"><i class="fas fa-plus"></i> <label>Nuevo Prodcuto</label></button>
 										</div>
 									</div>								
 								</div>
@@ -179,83 +127,32 @@
 					</div>
 				</div>
 				<div class="card">
-					<div class="card-header bg-success" id="headingTwo">
+					<div class="card-header bg-success" id="headingdos">
 						<h5 class="mb-0">
-							<button class="btn btn-danger collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-								Lacteos
+							<button class="btn btn-danger" data-toggle="collapse" data-target="#acordeondos" aria-expanded="false" aria-controls="acordeondos">
+								Frutas
 							</button>
 						</h5>
 					</div>
-					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+					<div id="acordeondos" class="collapse" aria-labelledby="headingdos" data-parent="#accordion">
 						<div class="row">
-							<div class="col-md-3">
+							<div class="col-md-12">
 								<div class="card">
 									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 1 Lacteo</strong></label>
-											<p>	Lorem ipsum dolor sit amet.</p>
-											<label><strong>Capasidad:</strong>1 Ltr</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value='5'><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto1-lacteo" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value='5'><i class="fas fa-plus"></i></button></td>
-												</tr>											
+										<div class="carrito table-responsive">
+											<table class="table table-striped table-bordered table-borderless table-sm" id="Frutas">
+												<thead class="thead-dark">
+													<tr>
+														<th>ID</th>
+														<th>Producto</th>
+														<th>Marca</th>
+														<th>Presentación</th>
+														<th>Cantidad</th>
+														<th>Observación (Opcional)</th>
+													</tr>													
+												</thead>										
 											</table>
-										</div>
-									</div>								
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="card">
-									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 2 Lacteo</strong></label>
-											<p>	Lorem ipsum dolor sit amet. Segundo producto</p>
-											<label><strong>Capasidad:</strong>5 Galones</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value="6"><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto2-lacteo" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value="6"><i class="fas fa-plus"></i></button></td>
-												</tr>											
-											</table>
-										</div>
-									</div>								
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="card">
-									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 3 Lacteo</strong></label>
-											<p>	Lorem ipsum dolor sit amet. Tercer producto</p>
-											<label><strong>Capasidad:</strong>250 ml</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value="7"><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto3-lacteo" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value="7"><i class="fas fa-plus"></i></button></td>
-												</tr>											
-											</table>
-										</div>
-									</div>								
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="card">
-									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 4 Lacteo</strong></label>
-											<p>	Lorem ipsum dolor sit amet. Cuarto producto</p>
-											<label><strong>Capasidad:</strong>1 (Bolsa)</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value="8"><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto4-lacteo" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value="8"><i class="fas fa-plus"></i></button></td>
-												</tr>											
-											</table>
+											<button class="btn btn-danger" onclick="productoNuevo(this)" value="2"><i class="fas fa-plus"></i> <label>Nuevo Prodcuto</label></button>
 										</div>
 									</div>								
 								</div>
@@ -264,89 +161,105 @@
 					</div>
 				</div>
 				<div class="card">
-					<div class="card-header bg-success" id="headingThree">
+					<div class="card-header bg-success" id="headingtres">
 						<h5 class="mb-0">
-							<button class="btn btn-danger collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								Abarrotes
+							<button class="btn btn-danger collapsed" data-toggle="collapse" data-target="#acordeon3" aria-expanded="false" aria-controls="acordeon3">
+								Verduras
 							</button>
 						</h5>
 					</div>
-					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-						<!--<div class="row">
-							<div class="col-md-3">
+					<div id="acordeon3" class="collapse" aria-labelledby="headingtres" data-parent="#accordion">
+						<div class="row">
+							<div class="col-md-12">
 								<div class="card">
 									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 1 Cmapo</strong></label>
-											<p>	Lorem ipsum dolor sit amet.</p>
-											<label><strong>Peso:</strong>500 (grs) - 1 Lbr</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value='1'><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto1" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value='1'><i class="fas fa-plus"></i></button></td>
-												</tr>											
+										<div class="carrito table-responsive">
+											<table class="table table-striped table-bordered table-borderless table-sm" id="Verduras">
+												<thead class="thead-dark">
+													<tr>
+														<th>ID</th>
+														<th>Producto</th>
+														<th>Marca</th>
+														<th>Presentación</th>
+														<th>Cantidad</th>
+														<th>Observación (Opcional)</th>
+													</tr>													
+												</thead>										
 											</table>
+											<button class="btn btn-danger" onclick="productoNuevo(this)" value="3"><i class="fas fa-plus"></i> <label>Nuevo Prodcuto</label></button>
 										</div>
 									</div>								
 								</div>
 							</div>
-							<div class="col-md-3">
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header bg-success" id="headingcuatro">
+						<h5 class="mb-0">
+							<button class="btn btn-danger collapsed" data-toggle="collapse" data-target="#cacordeon4" aria-expanded="false" aria-controls="cacordeon4">
+								Granos
+							</button>
+						</h5>
+					</div>
+					<div id="cacordeon4" class="collapse" aria-labelledby="headingcuatro" data-parent="#accordion">
+						<div class="row">
+							<div class="col-md-12">
 								<div class="card">
 									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 2 Campo</strong></label>
-											<p>	Lorem ipsum dolor sit amet. Segundo producto</p>
-											<label><strong>Peso:</strong>1000 (grs) - 1 Kl</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value="2"><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto2" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value="2"><i class="fas fa-plus"></i></button></td>
-												</tr>											
+										<div class="carrito table-responsive">
+											<table class="table table-striped table-bordered table-borderless table-sm" id="Granos">
+												<thead class="thead-dark">
+													<tr>
+														<th>ID</th>
+														<th>Producto</th>
+														<th>Marca</th>
+														<th>Presentación</th>
+														<th>Cantidad</th>
+														<th>Observación (Opcional)</th>
+													</tr>													
+												</thead>										
 											</table>
+											<button class="btn btn-danger" onclick="productoNuevo(this)" value="4"><i class="fas fa-plus"></i> <label>Nuevo Prodcuto</label></button>
 										</div>
 									</div>								
 								</div>
 							</div>
-							<div class="col-md-3">
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header bg-success" id="headingcinco">
+						<h5 class="mb-0">
+							<button class="btn btn-danger collapsed" data-toggle="collapse" data-target="#acordeoncinco" aria-expanded="false" aria-controls="acordeoncinco">
+								Desechables
+							</button>
+						</h5>
+					</div>
+					<div id="acordeoncinco" class="collapse" aria-labelledby="headingcinco" data-parent="#accordion">
+						<div class="row">
+							<div class="col-md-12">
 								<div class="card">
 									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 3 Campo</strong></label>
-											<p>	Lorem ipsum dolor sit amet. Tercer producto</p>
-											<label><strong>Peso:</strong>250 (grs) - 1/4 Lbs</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value="3"><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto3" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value="3"><i class="fas fa-plus"></i></button></td>
-												</tr>											
+										<div class="carrito table-responsive">
+											<table class="table table-striped table-bordered table-borderless table-sm" id="Desechables">
+												<thead class="thead-dark">
+													<tr>
+														<th>ID</th>
+														<th>Producto</th>
+														<th>Marca</th>
+														<th>Presentación</th>
+														<th>Cantidad</th>
+														<th>Observación (Opcional)</th>
+													</tr>													
+												</thead>										
 											</table>
+											<button class="btn btn-danger" onclick="productoNuevo(this)" value="5"><i class="fas fa-plus"></i> <label>Nuevo Prodcuto</label></button>
 										</div>
 									</div>								
 								</div>
 							</div>
-							<div class="col-md-3">
-								<div class="card">
-									<div class="card-body">
-										<div class="carrito">
-											<label><strong>Producto 4 Campo</strong></label>
-											<p>	Lorem ipsum dolor sit amet. Cuarto producto</p>
-											<label><strong>Peso:</strong>1 (Und)</label>
-											<table >
-												<tr>
-													<td><button class=" btn btn-danger" onclick="menos(this);" value="4"><i class="fas fa-minus"></i></button></td>
-													<td><input type="number" value="0" id="producto4" style="text-align: center; width: 100%" disabled></td>
-													<td><button class="btn btn-danger" onclick="mas(this)" value="4"><i class="fas fa-plus"></i></button></td>
-												</tr>											
-											</table>
-										</div>
-									</div>								
-								</div>
-							</div>
-						</div>-->
-						<p>EN CONSTRUCCION</p>
+						</div>
 					</div>
 				</div>
 			</div>
