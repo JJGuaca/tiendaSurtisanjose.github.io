@@ -219,3 +219,25 @@ function recogerPedido(){
 	}
 	$('#pedido').html(data);
 }
+
+/*alert(j);
+		codigo+='<table><tr>';
+		for (var i = 0; i < j.length; i++) {
+			codigo+='<td>';
+			var row=j[i];
+			for (var k = 0; k < row.length; k++) {
+				codigo+=row[k];
+			}
+			codigo+='</td>';
+		} codigo+='</tr></table>';*/
+
+function leerHojaCalculoJson(){
+	console.log('inicio de consuta el hoja de calculo');
+	var codigo='';
+	var parametros=[];
+	fetch('https://script.google.com/macros/s/AKfycbzVntXH58fskx8wTQiI2hcE58wJJTPSEs2vMVqfxLb2TVElyT-5/exec').then(function(respuesta){
+		return respuesta.json();
+	}).then(function(j){
+		console.log(j);
+	});
+}
