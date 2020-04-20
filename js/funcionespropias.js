@@ -134,7 +134,7 @@ function productoNuevo(valor){
 	if (opcion === 1) {
 		var tabla=document.getElementById('Lacteo');
 		var filas= tabla.rows.length;
-		tabla.insertRow(-1).innerHTML='</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>'
+		tabla.insertRow(-1).innerHTML='</td><td><select onfocus="lacteo(this)" onchange="bscarLacteo(this)" id="productoLacteo'+(filas)+'"><option disabled selected>Por favor Seleccione</option></select></td><td><select  id="productoLacteo'+(filas)+'marca" ><option disabled selected>Elija producto</option></select></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>'
 	}else if (opcion === 2) {
 		var tabla=document.getElementById('Frutas');
 		var filas= tabla.rows.length;
@@ -201,7 +201,7 @@ function quitarPorducto(valor){
 function recogerPedido(){
 	var data='';
 	var parametros=[];
-	$('td input').each(function(indice,elemento){
+	$('td select').each(function(indice,elemento){
 			var td={};
 			td=$(elemento).val();
 			parametros.push(td);
@@ -218,26 +218,4 @@ function recogerPedido(){
 
 	}
 	$('#pedido').html(data);
-}
-
-/*alert(j);
-		codigo+='<table><tr>';
-		for (var i = 0; i < j.length; i++) {
-			codigo+='<td>';
-			var row=j[i];
-			for (var k = 0; k < row.length; k++) {
-				codigo+=row[k];
-			}
-			codigo+='</td>';
-		} codigo+='</tr></table>';*/
-
-function leerHojaCalculoJson(){
-	console.log('inicio de consuta el hoja de calculo');
-	var codigo='';
-	var parametros=[];
-	fetch('https://script.google.com/macros/s/AKfycbzVntXH58fskx8wTQiI2hcE58wJJTPSEs2vMVqfxLb2TVElyT-5/exec').then(function(respuesta){
-		return respuesta.json();
-	}).then(function(j){
-		console.log(j);
-	});
 }
